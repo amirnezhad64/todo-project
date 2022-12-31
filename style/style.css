@@ -1,0 +1,156 @@
+
+@import url("/style/fonts.css");
+
+/* !RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+}
+
+/* !VARIABLES */
+
+:root{
+    --primary-color:#d89771;
+    --secondary-dark-color:#4e1708;
+    --secondary-light-color:#ff6f47;
+    --main-white:#fff;
+    --main-black:#000;
+    --main-transition:all 0.3s ease-in-out;
+    --main-spacing:0.01rem;
+}
+
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-image: linear-gradient(150deg,#fde047,#d88771);
+    color: var(--main-black);
+    min-height: 100vh;
+    font-family: sans-serif;
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container{
+    display: flex;
+    gap: 5rem;
+}
+form{
+    width: 25rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+form input{
+    flex: 1;
+}
+form input,form button{
+    border: none;
+    appearance: none;
+    outline: 0;
+    font-size: 2rem;
+    padding: 0.5rem;
+    background-color: var(--main-white);
+
+}
+form button{
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+form button:hover{
+    color: var(--main-white);
+    background-color: var(--primary-color);
+}
+.select{
+    position: relative;
+ 
+
+}
+.select::after{
+    content: "\25bc";
+    color: var(--primary-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    cursor: pointer;
+    transition: var(--main-transition);
+
+}
+
+.select:hover::after{
+    color: var(--main-white);
+    background-color: var(--primary-color);
+}
+.filter-todo{
+    appearance: none;
+    outline: 0;
+    border: none;
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    width: 15rem;
+}
+
+.todo-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+   
+}
+.todo{
+    display: flex;
+    width: 28rem;
+    background-color: var(--main-white);
+    margin:1rem;
+    font-size: 1.5rem;
+    color: var(--secondary-dark-color);
+    cursor: pointer;
+}
+.todo li{
+    flex: 1;
+    padding: 0.7rem ;
+ 
+}
+.todo span i{
+    color: var(--main-white);
+    background: var(--secondary-light-color);
+    padding:  1rem;
+    border: none;
+}
+.todo .fa-check-square{
+    background:rgb(6, 172, 6) ;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+  
+
+
+
+
+
+
+
